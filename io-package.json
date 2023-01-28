@@ -1,0 +1,90 @@
+{
+    "common": {
+        "name": "icloud_devices",
+        "version": "0.0.1",
+        "news": {
+            "0.0.1": {
+                "en": "initial release",
+                "de": "Erstveröffentlichung",
+                "ru": "Начальная версия",
+                "pt": "lançamento inicial",
+                "nl": "Eerste uitgave",
+                "fr": "Première version",
+                "it": "Versione iniziale",
+                "es": "Versión inicial",
+                "pl": "Pierwsze wydanie",
+                "zh-cn": "首次出版",
+                "uk": "початковий випуск"
+            }
+        },
+        "title": "ICloud Devices",
+        "titleLang": {
+            "en": "ICloud Devices",
+            "de": "ICloud-Geräte",
+            "ru": "iCloud-устройства",
+            "pt": "Dispositivos iCloud",
+            "nl": "iCloud-apparaten",
+            "fr": "Appareils ICloud",
+            "it": "Dispositivi ICloud",
+            "es": "Dispositivos iCloud",
+            "pl": "Urządzenia ICloud",
+            "zh-cn": "iCloud 设备",
+            "uk": "Пристрої ICloud"
+        },
+        "desc": {
+            "en": "Getting information like battery and location for ICloud devices",
+            "de": "Abrufen von Informationen wie Akku und Standort für ICloud-Geräte",
+            "ru": "Получение информации, такой как батарея и местоположение для устройств ICloud",
+            "pt": "Obtendo informações como bateria e localização para dispositivos iCloud",
+            "nl": "Informatie verkrijgen zoals batterij en locatie voor iCloud-apparaten",
+            "fr": "Obtenir des informations telles que la batterie et l'emplacement des appareils ICloud",
+            "it": "Ottenere informazioni come la batteria e la posizione per i dispositivi ICloud",
+            "es": "Obtener información como la batería y la ubicación de los dispositivos ICloud",
+            "pl": "Uzyskiwanie informacji, takich jak bateria i lokalizacja dla urządzeń ICloud",
+            "zh-cn": "获取 ICloud 设备的电池和位置等信息",
+            "uk": "Отримання таких відомостей, як акумулятор  місцезнаходження пристроїв ICloud"
+        },
+        "authors": [
+            "spabas <bastian.spaeth@gmx.de>"
+        ],
+        "keywords": [
+            "ioBroker",
+            "template",
+            "Smart Home",
+            "home automation"
+        ],
+        "license": "MIT",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "icloud_devices.png",
+        "enabled": true,
+        "extIcon": "https://raw.githubusercontent.com/spabas/ioBroker.icloud_devices/main/admin/icloud_devices.png",
+        "readme": "https://github.com/spabas/ioBroker.icloud_devices/blob/main/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "infrastructure",
+        "compact": true,
+        "connectionType": "cloud",
+        "dataSource": "poll",
+        "adminUI": {
+            "config": "json"
+        },
+        "dependencies": [
+            {
+                "js-controller": ">=3.3.22"
+            }
+        ],
+        "globalDependencies": [
+            {
+                "admin": ">=5.1.13"
+            }
+        ]
+    },
+    "native": {
+        "username": "",
+        "password": "",
+        "update_interval": 120000
+    },
+    "objects": [],
+    "instanceObjects": []
+}

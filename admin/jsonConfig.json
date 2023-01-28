@@ -1,0 +1,27 @@
+{
+	"i18n": true,
+	"type": "tabs",
+	"items": {
+		"options": {
+			"type": "panel",
+			"label": "Options",
+			"items": {
+				"username": {
+					"type": "text",
+					"label": "Username",
+					"newLine": true
+				},
+				"password": {
+					"type": "text",
+					"label": "Password",
+					"newLine": true
+				},
+				"update_interval": {
+					"type": "number",
+					"label": "Update Interval in milliseconds",
+					"newLine": true
+				}
+			}
+		}
+	}
+}
