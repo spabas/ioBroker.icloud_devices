@@ -21,6 +21,7 @@ Getting information like battery and location for ICloud devices
 -->
 
 ### **WORK IN PROGRESS**
+* (spabas) changed apple icloud api
 * Git Ignore
 * README
 
