@@ -31,6 +31,9 @@ class IcloudDevices extends utils.Adapter {
 	 */
 	async onReady() {
 		// Initialize your adapter here
+
+		//Overrite two factor method to read from object not from console
+		icloud.TwoFACodeRequest = this.provideTfaCode,
 		icloud.icloudSettingsFile = "./icloud_settings.json";
 
 		this.update_timer = null;
@@ -69,6 +72,8 @@ class IcloudDevices extends utils.Adapter {
 		this.update_timer = setInterval(() => {
 			this.doActions();
 		}, this.update_interval);
+
+		this.doActions();
 	}
 
 	/**
@@ -91,7 +96,7 @@ class IcloudDevices extends utils.Adapter {
 	 * @param {string} id
 	 * @param {ioBroker.State | null | undefined} state
 	 */
-	onStateChange(id, state) {
+	async onStateChange(id, state) {
 		if (state) {
 			// The state was changed
 			this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
@@ -99,11 +104,59 @@ class IcloudDevices extends utils.Adapter {
 			if (id == "icloud_devices.0.tfacode") {
 				icloud.tfacode = state.val;
 				state.ack = true;
+				await this.setStateAsync("icloud_devices.0.tfacode", "", true);
 			}
 		} else {
 			// The state was deleted
 			this.log.info(`state ${id} deleted`);
 		}
+	}
+
+	async provideTfaCode(callback) {
+
+		icloud.tfacode = "";
+		let trialcount = 0;
+		const timer = ms => new Promise(res => setTimeout(res, ms));
+
+		while (!icloud.tfacode && trialcount < 60)
+		{
+			trialcount++;
+			await timer(10000);
+		}
+
+		const options = {
+			url: "https://idmsa.apple.com/appleauth/auth/verify/trusteddevice/securitycode",
+			headers: {
+				"Content-Type": "application/json",
+				"Referer": "https://idmsa.apple.com/",
+				"scnt": icloud.AccountHeaders["scnt"],
+				"X-Apple-ID-Session-Id": icloud.AccountHeaders["X-Apple-ID-Session-Id"],
+				"X-Apple-Widget-Key": icloud.AccountHeaders["X-Apple-Widget-Key"],
+			},
+			json: {
+				"securityCode": {
+					"code": icloud.tfacode
+				}
+			}
+		};
+
+		icloud.iRequest.post(options, function(error, response) {
+			icloud.AccountHeaders["X-Apple-Session-Token"] = response.headers["x-apple-session-token"];
+
+			if (response.statusCode == 400) {
+				return callback("Login error | Invalid 2FA Code");
+			}
+
+			if (!response || response.statusCode != 204) {
+				return callback("Login error | Unable to verify 2FA code");
+			}
+
+			if (response.headers["x-apple-session-token"] == null) {
+				return callback("Login error | Something went wrong with 2FA verification");
+			}
+
+			return callback(true);
+		});
 	}
 
 	async doActions() {

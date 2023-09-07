@@ -19,6 +19,10 @@ Getting information like battery and location for ICloud devices
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (spabas) read tfa code from tfa-state, overwrite tfa method from lib to provide code not from std imput
+
 ### 0.2.0 (2023-07-30)
 * (spabas) changed apple icloud api
 * Git Ignore
