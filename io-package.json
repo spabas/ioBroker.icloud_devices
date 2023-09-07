@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "icloud_devices",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "news": {
+      "1.0.1": {
+        "en": "create config file if not exists",
+        "de": "config datei erstellen, wenn nicht vorhanden",
+        "ru": "создать config файл, если не существует",
+        "pt": "criar arquivo de configuração se não existir",
+        "nl": "creëer config bestand als hij niet bestaat",
+        "fr": "créer un fichier de configuration s'il n'existe pas",
+        "it": "creare file di configurazione se non esiste",
+        "es": "crear archivo de configuración si no existe",
+        "pl": "plik konfiguracyjny jeśli nie istnieje",
+        "uk": "створити файл конфігурації, якщо не існує",
+        "zh-cn": "如果没有存在,便可建立密封档案"
+      },
       "1.0.0": {
         "en": "read tfa code from tfa-state, overwrite tfa method from lib to provide code not from std imput",
         "de": "tfa-code von tfa-state, überschreiben tfa-methode von lib, um code nicht von std imput",
