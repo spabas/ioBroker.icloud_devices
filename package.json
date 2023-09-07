@@ -1,6 +1,6 @@
 {
   "name": "iobroker.icloud_devices",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Getting information like battery and location for ICloud devices",
   "author": {
     "name": "spabas",

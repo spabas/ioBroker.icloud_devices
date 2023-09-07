@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "icloud_devices",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "news": {
+      "1.0.2": {
+        "en": "bugfix resetting tfa code",
+        "de": "fehlerbehebung tfa-code",
+        "ru": "bugfix сброс tfa код",
+        "pt": "bugfix redefinindo o código tfa",
+        "nl": "quality over quantity (qoq) reseting tfa code",
+        "fr": "bugfix resetting code tfa",
+        "it": "bugfix reset tfa codice",
+        "es": "bugfix reseteo código tfa",
+        "pl": "bugfix reseting tfa code",
+        "uk": "javascript licenses api веб-сайт go1.13.8",
+        "zh-cn": "b 混合法守则"
+      },
       "1.0.1": {
         "en": "create config file if not exists",
         "de": "config datei erstellen, wenn nicht vorhanden",
