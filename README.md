@@ -20,7 +20,7 @@ Getting information like battery and location for ICloud devices
 	### **WORK IN PROGRESS**
 -->
 
-### **WORK IN PROGRESS*
+### **WORK IN PROGRESS**
 * (spabas) bugfix resetting tfa code
 
 ### 1.0.1 (2023-09-07)
