@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "icloud_devices",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "news": {
+      "1.0.4": {
+        "en": "apple api lib config filename has to be settings.json because hard referenced in lib",
+        "de": "apple api lib config dateiname muss einstellungen sein. json weil hart in lib referiert",
+        "ru": "apple api lib config файл имя должен быть настройки. json, потому что трудно ссылается в lib",
+        "pt": "apple api lib config filename tem que ser configurações. json porque duro referenciado em lib",
+        "nl": "appel api bib config dossiernaam moet ingesteld worden. json, want hard verwezen",
+        "fr": "apple api lib nom de fichier de configuration doit être des paramètres. json parce que dur référencé dans lib",
+        "it": "apple api lib config filename deve essere impostazioni. json perché difficile riferimento in lib",
+        "es": "apple api lib config filename tiene que ser la configuración. json porque se refiere duramente a lib",
+        "pl": "api lib config musi być ustawiony. json, ponieważ twarde wzmianki w libu",
+        "uk": "apple api lib config filename має бути налаштування. json тому що жорсткий довідник в lib",
+        "zh-cn": "a 装卸管道必须有环境。 json 因为难以在lib提及"
+      },
       "1.0.3": {
         "en": "logic was commented out :(",
         "de": ":(",
@@ -80,19 +93,6 @@
         "pl": "pierwsze wydanie",
         "uk": "початковий реліз",
         "zh-cn": "初步释放"
-      },
-      "0.0.1": {
-        "en": "initial release",
-        "de": "Erstveröffentlichung",
-        "ru": "Начальная версия",
-        "pt": "lançamento inicial",
-        "nl": "Eerste uitgave",
-        "fr": "Première version",
-        "it": "Versione iniziale",
-        "es": "Versión inicial",
-        "pl": "Pierwsze wydanie",
-        "zh-cn": "首次出版",
-        "uk": "початковий випуск"
       }
     },
     "title": "ICloud Devices",
