@@ -35,7 +35,7 @@ class IcloudDevices extends utils.Adapter {
 
 		//Overrite two factor method to read from object not from console
 		icloud.TwoFACodeRequest = this.provideTfaCode,
-		icloud.icloudSettingsFile = "./abc.json";
+		icloud.icloudSettingsFile = "./icloud_settings.json";
 
 		this.update_timer = null;
 		this.update_interval = 120000;
@@ -82,11 +82,11 @@ class IcloudDevices extends utils.Adapter {
 		// In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
 		this.subscribeStates("tfacode");
 
-		// this.update_timer = setInterval(() => {
-		// 	this.doActions();
-		// }, this.update_interval);
+		this.update_timer = setInterval(() => {
+			this.doActions();
+		}, this.update_interval);
 
-		// this.doActions();
+		this.doActions();
 	}
 
 	/**
