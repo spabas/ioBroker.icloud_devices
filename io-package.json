@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "icloud_devices",
-    "version": "0.2.0",
+    "version": "1.0.0",
     "news": {
+      "1.0.0": {
+        "en": "read tfa code from tfa-state, overwrite tfa method from lib to provide code not from std imput",
+        "de": "tfa-code von tfa-state, überschreiben tfa-methode von lib, um code nicht von std imput",
+        "ru": "читать tfa код из tfa-state, переписать метод tfa от lib, чтобы предоставить код не от std imput",
+        "pt": "ler o código tfa de tfa-state, sobrescrever o método tfa da lib para fornecer código não da gota de std",
+        "nl": "las tafacode van tfa-state, overschrijvingsmethode van lib om geen code te verstrekken van sten imput",
+        "fr": "lire code tfa de tfa-state, overwrite tfa méthode de lib pour fournir le code non de std imput",
+        "it": "leggere il codice tfa da tfa-state, sovrascrivere il metodo tfa da lib per fornire il codice non da std imput",
+        "es": "read tfa code from tfa-state, overwrite tfa method from lib to provide code not from std imput",
+        "pl": "czytanie kodu z tfa-state, nadpisuje metodę tfa z libu, aby zapewnić kod nie od std imput",
+        "uk": "читати tfa код з tfa-state, перезапис tfa метод від lib, щоб забезпечити код не від std",
+        "zh-cn": "简写法系:国家法、宽松的制法,以利布语提供不成图的编码。"
+      },
       "0.2.0": {
         "en": "changed apple icloud api\nGit Ignore\nREADME",
         "de": "äpfel und äpfel\nGit Ignorieren\nBEGRÜNDUNG",
