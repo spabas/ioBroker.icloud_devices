@@ -114,7 +114,7 @@ class IcloudDevices extends utils.Adapter {
 			// The state was changed
 			this.log.info(`state ${id} changed: ${state.val} (ack = ${state.ack})`);
 
-			if (id == "icloud_devices.0.tfacode") {
+			if (id == "icloud_devices.0.tfacode" && state.ack == false) {
 				icloud.tfacode = state.val;
 				state.ack = true;
 				await this.setStateAsync("icloud_devices.0.tfacode", "", true);
