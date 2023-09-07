@@ -8,6 +8,7 @@
 // you need to create an adapter
 const utils = require("@iobroker/adapter-core");
 const icloud = require("apple-icloudapi");
+const fs = require("fs");
 
 class IcloudDevices extends utils.Adapter {
 
@@ -34,7 +35,7 @@ class IcloudDevices extends utils.Adapter {
 
 		//Overrite two factor method to read from object not from console
 		icloud.TwoFACodeRequest = this.provideTfaCode,
-		icloud.icloudSettingsFile = "./icloud_settings.json";
+		icloud.icloudSettingsFile = "./abc.json";
 
 		this.update_timer = null;
 		this.update_interval = 120000;
@@ -45,6 +46,18 @@ class IcloudDevices extends utils.Adapter {
 		this.log.info("config username: " + this.config.username);
 		this.log.info("config password: " + this.config.password.substring(0, 3) + "*******");
 		this.log.info("config update_interval_live: " + this.config.update_interval);
+
+		if (!fs.existsSync(icloud.icloudSettingsFile))
+		{
+			fs.writeFile(icloud.icloudSettingsFile, JSON.stringify({
+				"apple_id": this.config.username,
+				"password": this.config.password,
+				"googleApiKey": "",
+				"trustToken": ""
+			}, null, 4), "utf8", function(err) {
+				if (err) throw err;
+			});
+		}
 
 		if (this.config.update_interval > 0)
 			this.update_interval = this.config.update_interval;
@@ -69,11 +82,11 @@ class IcloudDevices extends utils.Adapter {
 		// In order to get state updates, you need to subscribe to them. The following line adds a subscription for our variable we have created above.
 		this.subscribeStates("tfacode");
 
-		this.update_timer = setInterval(() => {
-			this.doActions();
-		}, this.update_interval);
+		// this.update_timer = setInterval(() => {
+		// 	this.doActions();
+		// }, this.update_interval);
 
-		this.doActions();
+		// this.doActions();
 	}
 
 	/**
