@@ -18,3 +18,5 @@ admin/i18n/*/flat.txt
 
 # icloud session file
 icloud_settings.json
+settings.json
+cookies.json
