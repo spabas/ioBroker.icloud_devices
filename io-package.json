@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "icloud_devices",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "news": {
+      "1.0.3": {
+        "en": "logic was commented out :(",
+        "de": ":(",
+        "ru": "логика была прокомментирована :(",
+        "pt": "a lógica foi comentada :(",
+        "nl": "het logica werd gereageerd:",
+        "fr": "la logique a été commentée :(",
+        "it": "la logica è stata commentata:(",
+        "es": "lógica fue comentada :(",
+        "pl": "kwestia ta została skomentowana:(..)",
+        "uk": "логіку:",
+        "zh-cn": "评 注"
+      },
       "1.0.2": {
         "en": "bugfix resetting tfa code",
         "de": "fehlerbehebung tfa-code",
