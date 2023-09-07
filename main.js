@@ -35,7 +35,7 @@ class IcloudDevices extends utils.Adapter {
 
 		//Overrite two factor method to read from object not from console
 		icloud.TwoFACodeRequest = this.provideTfaCode,
-		icloud.icloudSettingsFile = "./icloud_settings.json";
+		icloud.icloudSettingsFile = "./settings.json";
 
 		this.update_timer = null;
 		this.update_interval = 120000;
