@@ -175,13 +175,15 @@ class IcloudDevices extends utils.Adapter {
 	async doActions() {
 		const instance = this;
 		try {
+			this.log.info("Getting data");
 			icloud.getDevices(function(err, devices) {
 				if (err) return console.error(err);
 
 				if (devices && devices.length > 0) {
 					devices.forEach(async element => {
 
-						instance.log.debug(element);
+						instance.log.info("Data received for: " + element.name);
+						instance.log.debug(JSON.stringify(element));
 
 						await instance.setObjectNotExistsAsync(element.id + ".id", {
 							type: "state",

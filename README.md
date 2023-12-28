@@ -19,6 +19,10 @@ Getting information like battery and location for ICloud devices
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
+
+### **WORK IN PROGRESS**
+* (spabas) logging
+
 ### 1.0.4 (2023-09-07)
 * (spabas) apple api lib config filename has to be settings.json because hard referenced in lib
 
