@@ -19,8 +19,7 @@ Getting information like battery and location for ICloud devices
 	Placeholder for the next version (at the beginning of the line):
 	### **WORK IN PROGRESS**
 -->
-
-### **WORK IN PROGRESS**
+### 1.0.6 (2023-12-28)
 * (spabas) updated modules
 
 ### 1.0.5 (2023-12-28)

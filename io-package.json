@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "icloud_devices",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "news": {
+      "1.0.6": {
+        "en": "updated modules",
+        "de": "aktualisierte module",
+        "ru": "обновленные модули",
+        "pt": "módulos atualizados",
+        "nl": "vertaling:",
+        "fr": "modules mis à jour",
+        "it": "moduli aggiornati",
+        "es": "módulos actualizados",
+        "pl": "moduł aktualizowany",
+        "uk": "оновлені модулі",
+        "zh-cn": "更新单元"
+      },
       "1.0.5": {
         "en": "logging",
         "de": "einloggen",
@@ -80,19 +93,6 @@
         "pl": "czytanie kodu z tfa-state, nadpisuje metodę tfa z libu, aby zapewnić kod nie od std imput",
         "uk": "читати tfa код з tfa-state, перезапис tfa метод від lib, щоб забезпечити код не від std",
         "zh-cn": "简写法系:国家法、宽松的制法,以利布语提供不成图的编码。"
-      },
-      "0.2.0": {
-        "en": "changed apple icloud api\nGit Ignore\nREADME",
-        "de": "äpfel und äpfel\nGit Ignorieren\nBEGRÜNDUNG",
-        "ru": "изменил яблоко icloud api\nGit Игнорировать\nЧИТАТЬ",
-        "pt": "muda de maçã\nGit Ignorar\nREALIZAÇÃO",
-        "nl": "api\nGit Ignore\nVERTALING:",
-        "fr": "changé de pomme icloud api\nGit Ignore\nREADME",
-        "it": "cambiato mela icloud api\nGit Ignore\nREADEM",
-        "es": "cambio de manzana icloud api\nGit Ignore\nREADME",
-        "pl": "zmienił jabłko api\nGit Ignore\nREADME",
-        "uk": "змінений яблучний icloud api\nGit Ігнор\nЗАМОВИТИ",
-        "zh-cn": "a. 装修\nGit Ignore\n建 议"
       }
     },
     "title": "ICloud Devices",
