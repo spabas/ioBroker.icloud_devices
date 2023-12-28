@@ -1,8 +1,21 @@
 {
   "common": {
     "name": "icloud_devices",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "news": {
+      "1.0.5": {
+        "en": "logging",
+        "de": "einloggen",
+        "ru": "вход",
+        "pt": "registro",
+        "nl": "logging",
+        "fr": "journalisation",
+        "it": "logging",
+        "es": "logging",
+        "pl": "logowanie",
+        "uk": "увійти",
+        "zh-cn": "伐木"
+      },
       "1.0.4": {
         "en": "apple api lib config filename has to be settings.json because hard referenced in lib",
         "de": "apple api lib config dateiname muss einstellungen sein. json weil hart in lib referiert",
@@ -80,19 +93,6 @@
         "pl": "zmienił jabłko api\nGit Ignore\nREADME",
         "uk": "змінений яблучний icloud api\nGit Ігнор\nЗАМОВИТИ",
         "zh-cn": "a. 装修\nGit Ignore\n建 议"
-      },
-      "0.1.0": {
-        "en": "initial release",
-        "de": "erstausstrahlung",
-        "ru": "начальный выпуск",
-        "pt": "lançamento inicial",
-        "nl": "niet",
-        "fr": "initial release",
-        "it": "rilascio iniziale",
-        "es": "liberación inicial",
-        "pl": "pierwsze wydanie",
-        "uk": "початковий реліз",
-        "zh-cn": "初步释放"
       }
     },
     "title": "ICloud Devices",
